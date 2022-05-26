@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.txt-hide {
+    position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+body {
+    background: #5B2386;
+}
+
+.header {
+    text-align: center;
+}
+.container{
+    text-align: center;
+}
+
+/* 이미지에는 가상요소를 쓸 수 없음.*/
+.img-logo {
+    width: 564px;
+    margin-top: 194px;
+    margin-bottom: 124px;
+    position:relative;
+}
+h1::before {
+    content:'';
+    display:block;
+    height: 225px;
+    background:url(../image/시계.png) no-repeat center center;
+    position:absolute;
+    width:100%;
+    top:140px;
+}
+
+.container .txt-tit {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    color: #F5DF4D;
+    margin-bottom:78px;
+}
+
+.txt-def {
+    display:inline-block;
+    position:relative;
+    padding-bottom:102px;
+}
+
+.txt-def::before {
+    content:'';
+    display:block;
+    background:url(../image/“.png) no-repeat center top;
+    width:46px;
+    height:96px;
+    position:absolute;
+    left:-50px;
+}
+
+.txt-def::after {
+    content:'';
+    display:block;
+    background:url(../image/”.png) no-repeat center top;
+    width:46px;
+    height:96px;
+    position:absolute;
+    right:-50px;
+    top:0px;
+}
+
+
+.container .txt-info.strong {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.container .txt-info {
+    color:white;
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.inp-exp {
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+.inp-exp .btn-inpField {
+    height: 57px;
+    width: 228px;
+    border-radius: 7px;
+    margin:0 17px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 27px;
+}
+
+.inp-time {
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+.inp-time .btn-inpTime {
+    height: 57px;
+    width: 228px;
+    border-radius: 7px;
+    margin:0 17px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 115px;
+}
+
+.btn-res {
+    border:1px solid #5B2386;
+    border-radius: 56px;
+    padding: 21px 49px;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 700;
+    background-color:#FCEE21;
+    color: #5B2386;
+    box-sizing:border-box;
+    margin-bottom:147px;
+}
+
+.btn-nextImg {
+    vertical-align:middle;
+}
+
+/* 결과 로딩 */
+.result_loading {
+    display:none;
+    justify-content:center;
+    margin-bottom: 80px;
+}
+
+.result_loading .img_wrap {
+    width: 100px;
+    height: 100px;
+    text-align:center;
+}
+
+.result_loading .img_wrap img {
+    width: 100%;
+    height: auto;
+    animation: rotate 1.1s infinite linear;
+}
+.inp-res {
+    display:none;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 400;
+    color:white;
+    margin-bottom:127px;
+}
+
+.inp-res strong{
+    font-family: Gmarket Sans;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+.btn-go {
+    display:none;
+    margin-bottom:130px;
+}
+.btn-go .btn-training {
+    border-radius: 56px;
+    padding: 21px 49px;
+    background-color: #FCEE21;
+    border:1px solid #5B2386;
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 700;
+    color: #5B2386;
+    margin-right:18px;
+}
+
+.btn-go .btn-share {
+    border-radius: 56px;
+    padding: 21px 49px;  
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    font-weight: 700;
+    background-color:white;
+    color: #5B2386;
+    border:1px solid #5B2386;
+}
+
+
+.footer {
+    text-align:center;
+    font-family: 'Noto Sans KR';
+    font-size: 12px;
+    font-weight: 400;
+    color:white;
+    margin-bottom: 90px;
+}
+
+.footer img {
+    margin-bottom:20px;   
+}
